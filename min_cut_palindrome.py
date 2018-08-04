@@ -12,7 +12,7 @@ def main():
     length = len(s)
     dp = [-1 for _ in range(length + 1)]
     p = [[False for _ in range(length)] for _ in range(length)]
-    
+
     for i in range(length - 1, -1, -1):
         dp[i] = sys.maxsize
         for j in range(i, length, 1):
