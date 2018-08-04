@@ -30,6 +30,9 @@ def main():
     dp2 = [[0 for _ in range(N)] for _ in range(K)]
     res = 0
 
+    if N == 1:
+        return ability[0]
+
     for i in range(N):
         dp1[0][i] = ability[i]
         dp2[0][i] = ability[i]
