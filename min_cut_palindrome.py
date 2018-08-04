@@ -19,8 +19,6 @@ def main():
                 p[i][j] = True
                 dp[i] = min(dp[i], dp[j + 1] + 1)
 
-    print(dp)
-
     return dp[0]
 
 
