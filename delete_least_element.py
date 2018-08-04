@@ -23,8 +23,7 @@
 def main():
     n = int(input())
     A = list(map(int, input().split(' ')))
-    result = 0
-    print(A)
+    res = 0
 
     dp1 = [1 for _ in range(n)]
     dp2 = [1 for _ in range(n)]
@@ -41,12 +40,11 @@ def main():
                 dp2[i] = max(dp2[j] + 1, dp2[i])
 
     for i in range(n):
-        print(i, dp1[i] + dp2[i])
-        result = max(dp1[i] + dp2[i] - 1, result)
+        res = max(dp1[i] + dp2[i] - 1, res)
 
     return n - res
 
 
 if __name__ == '__main__':
-    res = main()
-    print(res)
+    result = main()
+    print(result)
