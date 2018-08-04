@@ -23,5 +23,5 @@ def main():
 
 
 if __name__ == '__main__':
-    res = main()
-    print(res)
+    result = main()
+    print(result)
