@@ -26,13 +26,8 @@ def heapsort(arr):
         arr[0], arr[i] = arr[i], arr[0]
         adjustheap(arr, 0, i)
 
-    print(arr)
-
-
-def main():
-    arr = [9, 8, 75, 8, 3, 7, 3, 2, 1]
-    heapsort(arr)
-
 
 if __name__ == '__main__':
-    main()
+    arr = [9, 8, 75, 8, 3, 7, 3, 2, 1]
+    heapsort(arr)
+    print(arr)

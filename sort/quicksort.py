@@ -19,12 +19,7 @@ def quicksort(arr, left, right):
     quicksort(arr, i + 1, right)
 
 
-def main():
+if __name__ == '__main__':
     arr = [3, 5, 2, 6, 1, 4, 9, 6]
     quicksort(arr, 0, len(arr) - 1)
-    return arr
-
-
-if __name__ == '__main__':
-    result = main()
-    print(result)
+    print(arr)
