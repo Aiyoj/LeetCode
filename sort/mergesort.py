@@ -1,5 +1,4 @@
 
-
 def merge(a, b):
     c = []
     h = j = 0

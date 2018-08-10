@@ -1,5 +1,4 @@
 
-
 def adjustheap(arr, i, length):
     # 取出当前元素
     tmp = arr[i]
