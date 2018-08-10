@@ -20,10 +20,28 @@ def main():
     dp = [0 for _ in range(Sum + 1)]
     dp[0] = 1
     for i in range(len(Arr)):
-        for j in range(Sum, Arr[i]-1, -1):
+        for j in range(Sum, Arr[i] - 1, -1):
             dp[j] += dp[j - Arr[i]]
 
     return dp[Sum]
 
 
-print(main())
+def main2():
+    N, Sum = list(map(int, input().split()))
+    Arr = list(map(int, input().split()))
+    dp = [[0 for j in range(Sum + 1)] for i in range(len(Arr) + 1)]
+    for i in range(Sum + 1):
+        dp[0][i] = 0
+    dp[0][0] = 1
+
+    for i in range(1, len(Arr) + 1):
+        for j in range(Sum + 1):
+            dp[i][j] = dp[i - 1][j]
+            if j >= Arr[i - 1]:
+                dp[i][j] += dp[i - 1][j - Arr[i - 1]]
+
+    return dp[len(Arr)][Sum]
+
+
+# print(main())
+print(main2())
