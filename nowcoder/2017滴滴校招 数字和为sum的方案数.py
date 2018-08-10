@@ -14,19 +14,7 @@
 # 4
 
 
-def main():
-    N, Sum = list(map(int, input().split()))
-    Arr = list(map(int, input().split()))
-    dp = [0 for _ in range(Sum + 1)]
-    dp[0] = 1
-    for i in range(len(Arr)):
-        for j in range(Sum, Arr[i] - 1, -1):
-            dp[j] += dp[j - Arr[i]]
-
-    return dp[Sum]
-
-
-def main2():
+def main1():
     N, Sum = list(map(int, input().split()))
     Arr = list(map(int, input().split()))
     dp = [[0 for j in range(Sum + 1)] for i in range(len(Arr) + 1)]
@@ -43,5 +31,17 @@ def main2():
     return dp[len(Arr)][Sum]
 
 
-# print(main())
-print(main2())
+def main2():
+    N, Sum = list(map(int, input().split()))
+    Arr = list(map(int, input().split()))
+    dp = [0 for _ in range(Sum + 1)]
+    dp[0] = 1
+    for i in range(len(Arr)):
+        for j in range(Sum, Arr[i] - 1, -1):
+            dp[j] += dp[j - Arr[i]]
+
+    return dp[Sum]
+
+
+print(main1())
+# print(main2())
